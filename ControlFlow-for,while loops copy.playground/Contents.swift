@@ -66,4 +66,69 @@ for attempt in 1..<scratchCard {
     }
 }
 
+//While – Loop and Repeat-while loop:
+//1
+var prodNumber:Int = 6
+var product:Int = 1
+print("The product of first \(prodNumber) numbers is",terminator:" ")
+
+while prodNumber>0 {
+    product*=prodNumber
+    prodNumber-=1
+}
+print(product)
+
+//2
+var rangeValue:Int = 30
+while rangeValue >= 1 {
+    if rangeValue%3 == 0 {
+        print("\(rangeValue)",terminator:" ")
+    }
+    rangeValue-=1
+}
+
+//3
+var Number = 1
+repeat {
+    print(Number,terminator:" ")
+    Number += 1
+} while Number <= 10
+
+//4
+var numBer = 3
+repeat {
+    print("Hello World!!")
+    numBer+=1
+} while (numBer <= 2)
+
+//5
+var a=0
+var b=10
+
+while (b-2 > 0){
+    b-=2
+    while (a+2 < 10){
+        a+=2
+        if a==b {
+            continue
+        }
+        print("(\(a),\(b) )",terminator:"")
+    }
+}
+
+//6
+var d = 100;
+while( d > 50 )
+{
+    d = d - 30
+}
+print(d)
+if( d > 70 ){
+    d-=20;
+    
+}
+else{
+    d+=35;
+}
+print(d);
 
