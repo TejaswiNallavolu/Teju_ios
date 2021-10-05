@@ -10,7 +10,7 @@ import UIKit
     class ViewController: UIViewController {
 
       
-        @IBOutlet weak var laNumberShow: UILabel!
+        @IBOutlet weak var resultlabel: UILabel!
            
            var number1=""
            var number2=""
@@ -24,33 +24,34 @@ import UIKit
                // Do any additional setup after loading the view.
            }
            
-           @IBAction func clearButton(_ sender: UIButton) {
+           @IBAction func clear(_ sender: UIButton) {
                number2 = ""
+            resultlabel.text = ""
            }
            
-           @IBAction func swapButton(_ sender: UIButton) {
+           @IBAction func swap(_ sender: UIButton) {
                
                //        print("The nsns \(number1)")
                if number1 != "" {
                    
-                   laNumberShow.text = "-" + laNumberShow.text!
-                   number1 = "\(laNumberShow.text!)"
+                   resultlabel.text = "-" + resultlabel.text!
+                   number1 = "\(resultlabel.text!)"
                    
                    print("number 1 is \(number1)")
                    print("number 2 is \(number2)")
                }
                else{
-                   laNumberShow.text = "-" + laNumberShow.text!
-                   number2 = "\(laNumberShow.text!)"
+                   resultlabel.text = "-" + resultlabel.text!
+                   number2 = "\(resultlabel.text!)"
                    print("number 1 is \(number1)")
                    print("number 2 is \(number2)")
                }
                
            }
-           @IBAction func divideButton(_ sender: UIButton) {
-               let temp = calTemp(operation)
+           @IBAction func divide(_ sender: UIButton) {
+               let temp = calculate(operation)
                operation = "/"
-               laNumberShow.text = (temp != "") ? resultFormatter(temp) : ""
+               resultlabel.text = (temp != "") ? resultFormatter(temp) : ""
                if temp != "" {
                    //            inChainmode = true
                    if number2 != ""{
@@ -60,9 +61,9 @@ import UIKit
                            result = String(Double(temp)! / Double(number2)!)
                            print(result)
                            if result == "inf"{
-                               laNumberShow.text! = "Error"
+                               resultlabel.text! = "Error"
                            }else{
-                               laNumberShow.text! = resultFormatter(result)
+                               resultlabel.text! = resultFormatter(result)
                            }
                        }
                    }
@@ -70,12 +71,12 @@ import UIKit
                opChanged = true
                
            }
-           @IBAction func multiplyButton(_ sender: UIButton) {
-               let temp = calTemp(operation)
+           @IBAction func multiply(_ sender: UIButton) {
+               let temp = calculate(operation)
                print("temp is \(temp)")
                operation = "*"
                currentNumber2=""
-               laNumberShow.text = (temp != "") ? resultFormatter(temp) : ""
+               resultlabel.text = (temp != "") ? resultFormatter(temp) : ""
                //        number1=temp;
                //        if temp != ""{
                //            number2=""
@@ -86,10 +87,10 @@ import UIKit
                
            }
            
-           @IBAction func minusButton(_ sender: UIButton) {
-               let temp = calTemp(operation)
+           @IBAction func minus(_ sender: UIButton) {
+               let temp = calculate(operation)
                operation = "-"
-               laNumberShow.text = (temp != "") ? resultFormatter(temp) : ""
+               resultlabel.text = (temp != "") ? resultFormatter(temp) : ""
                if temp != "" {
                    //            inChainmode = true
                    if number2 != ""{
@@ -97,19 +98,19 @@ import UIKit
                        currentNumber2 = number2;
                        if opChanged {
                            result = String(Double(temp)! - Double(number2)!)
-                           laNumberShow.text! = resultFormatter(result)
+                           resultlabel.text! = resultFormatter(result)
                        }
                    }
                }
                opChanged = true
                
            }
-           @IBAction func plusButton(_ sender: UIButton) {
-               let temp = calTemp(operation)
+           @IBAction func plus(_ sender: UIButton) {
+               let temp = calculate(operation)
                print("temp is \(temp)")
                operation = "+"
                currentNumber2=""
-               laNumberShow.text = (temp != "") ? resultFormatter(temp) : ""
+               resultlabel.text = (temp != "") ? resultFormatter(temp) : ""
                //        number1=temp;
                //        if temp != ""{
                //            number2=currentNumber2
@@ -117,18 +118,18 @@ import UIKit
                opChanged=true
                
            }
-           @IBAction func equasButton(_ sender: UIButton) {
+           @IBAction func equals(_ sender: UIButton) {
                var res = ""
                switch operation {
                case "+":
                    
                    if currentNumber2 != "" {
                        res = String(Double(number1)! + Double(currentNumber2)!)
-                       laNumberShow.text = resultFormatter(res)
+                       resultlabel.text = resultFormatter(res)
                         number2 = currentNumber2
                    }else{
                        res = String(Double(number1)! + Double(number2)!)
-                       laNumberShow.text = resultFormatter(res)
+                       resultlabel.text = resultFormatter(res)
                    }
                    number1 = res
                    
@@ -136,11 +137,11 @@ import UIKit
                case "*":
                    if currentNumber2 != "" {
                        res = String(Double(number1)! * Double(currentNumber2)!)
-                       laNumberShow.text = resultFormatter(res)
+                       resultlabel.text = resultFormatter(res)
                        //                number2 = ""
                    }else{
                        res = String(Double(number1)! * Double(number2)!)
-                       laNumberShow.text = resultFormatter(res)
+                       resultlabel.text = resultFormatter(res)
                    }
                    number1 = res
                    
@@ -148,35 +149,35 @@ import UIKit
                case "-":
                    if currentNumber2 != "" {
                        res = String(Double(number1)! - Double(currentNumber2)!)
-                       laNumberShow.text = resultFormatter(res)
+                       resultlabel.text = resultFormatter(res)
                        //                number2 = ""
                    }else{
                        res = String(Double(number1)! - Double(number2)!)
-                       laNumberShow.text = resultFormatter(res)
+                       resultlabel.text = resultFormatter(res)
                    }
                    number1 = res
                    //            number2 = ""
                    break
                case "/":
-                   if laNumberShow.text == "Error"{
+                   if resultlabel.text == "Error"{
                        clearAll()
                    }else{
                        if currentNumber2 != "" {
                            res = String(Double(number1)! / Double(currentNumber2)!)
                            if res == "inf"{
-                               laNumberShow.text! = "Error"
+                               resultlabel.text! = "Error"
                                return
                            }else{
-                               laNumberShow.text = resultFormatter(res)
+                               resultlabel.text = resultFormatter(res)
                                //                        number2 = ""
                            }
                        }else{
                            res = String(Double(number1)! / Double(number2)!)
                            if res == "inf"{
-                               laNumberShow.text! = "Error"
+                               resultlabel.text! = "Error"
                                return
                            }else{
-                               laNumberShow.text = resultFormatter(res)
+                               resultlabel.text = resultFormatter(res)
                            }
                        }
                        number1 = res
@@ -188,13 +189,13 @@ import UIKit
                }
                
            }
-           @IBAction func sqaureRootButton(_ sender: UIButton) {
-               if laNumberShow.text == "" || laNumberShow.text == "0"{
+           @IBAction func sqaureRoot(_ sender: UIButton) {
+               if resultlabel.text == "" || resultlabel.text == "0"{
                    return
                }
-               let numberRoot = laNumberShow.text
-               laNumberShow.text = resultFormatter(String(Double(numberRoot!)!.squareRoot()))
-               number1 = laNumberShow.text!
+               let numberRoot = resultlabel.text
+               resultlabel.text = resultFormatter(String(Double(numberRoot!)!.squareRoot()))
+               number1 = resultlabel.text!
                number2 = ""
                
            }
@@ -229,7 +230,7 @@ import UIKit
            @IBAction func button0(_ sender: UIButton) {
                setData("0")
            }
-           @IBAction func buttonDot(_ sender: UIButton) {
+           @IBAction func decimal(_ sender: UIButton) {
                setData(".")
            }
            @IBAction func allClearButton(_ sender: UIButton) {
@@ -242,33 +243,33 @@ import UIKit
                opChanged = false
                operation = ""
                currentNumber2 = ""
-               laNumberShow.text = "0"
-               laNumberShow.textColor = .red
+               resultlabel.text = "0"
+               resultlabel.textColor = .red
                inChainmode=false
            }
            
            func setData(_ number: String){
-               if laNumberShow.text == "0"{
-                   laNumberShow.text = ""
-                   laNumberShow.textColor = .white
+               if resultlabel.text == "0"{
+                   resultlabel.text = ""
+                   resultlabel.textColor = .white
                }
                if !opChanged {
-                   laNumberShow.text! += number
+                   resultlabel.text! += number
                    number1 += number
                }else{
                    print(inChainmode)
                    if !inChainmode {
-                       laNumberShow.text! += number
+                       resultlabel.text! += number
                        number2 += number
                    }else {
-                       laNumberShow.text = ""
-                       laNumberShow.text! += number
+                       resultlabel.text = ""
+                       resultlabel.text! += number
                        number2 += number
                    }
                }
            }
            
-           func calTemp(_ operation:String)->String {
+           func calculate(_ operation:String)->String {
                print("\(number1),\(number2)")
                if number1 != "" && number2 != ""{
                    if operation == "+"{
