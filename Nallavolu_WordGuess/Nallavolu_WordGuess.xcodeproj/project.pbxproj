@@ -12,8 +12,8 @@
 		3FD4EB0327250EB300960443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4EB0227250EB300960443 /* ViewController.swift */; };
 		3FD4EB0627250EB300960443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4EB0427250EB300960443 /* Main.storyboard */; };
 		3FD4EB0927250EB400960443 /* Nallavolu_WordGuess.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4EB0727250EB400960443 /* Nallavolu_WordGuess.xcdatamodeld */; };
-		3FD4EB0B27250EB900960443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4EB0A27250EB900960443 /* Assets.xcassets */; };
 		3FD4EB0E27250EB900960443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4EB0C27250EB900960443 /* LaunchScreen.storyboard */; };
+		3FD4EB162728D2C400960443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4EB152728D2C400960443 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		3FD4EB0227250EB300960443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FD4EB0527250EB300960443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FD4EB0827250EB400960443 /* Nallavolu_WordGuess.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nallavolu_WordGuess.xcdatamodel; sourceTree = "<group>"; };
-		3FD4EB0A27250EB900960443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD4EB0D27250EB900960443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD4EB0F27250EB900960443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD4EB152728D2C400960443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +62,9 @@
 				3FD4EB0027250EB300960443 /* SceneDelegate.swift */,
 				3FD4EB0227250EB300960443 /* ViewController.swift */,
 				3FD4EB0427250EB300960443 /* Main.storyboard */,
-				3FD4EB0A27250EB900960443 /* Assets.xcassets */,
 				3FD4EB0C27250EB900960443 /* LaunchScreen.storyboard */,
 				3FD4EB0F27250EB900960443 /* Info.plist */,
+				3FD4EB152728D2C400960443 /* Assets.xcassets */,
 				3FD4EB0727250EB400960443 /* Nallavolu_WordGuess.xcdatamodeld */,
 			);
 			path = Nallavolu_WordGuess;
@@ -128,7 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD4EB0E27250EB900960443 /* LaunchScreen.storyboard in Resources */,
-				3FD4EB0B27250EB900960443 /* Assets.xcassets in Resources */,
+				3FD4EB162728D2C400960443 /* Assets.xcassets in Resources */,
 				3FD4EB0627250EB300960443 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
