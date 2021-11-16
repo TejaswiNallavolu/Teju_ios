@@ -28,9 +28,9 @@ var empName:String
     var empID:Int
     var empSalary:Double
 }
-           // func salaryAfterDeduction()->Double{
-         //return self.empSalary*0.65;
-        //        }
+            func salaryAfterDeduction()->Double{
+                return self.empSalary * 0.65;
+               }
        
 var employee=Employee(empName:"Gaurav Rathod",empID: 34567,empSalary: 100000)
 
