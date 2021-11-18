@@ -74,12 +74,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Oj-CM-IKR">
+                                <rect key="frame" x="106" y="566" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O2p-vH-6SH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="F0Z-Hm-oWm"/>
                     <connections>
+                        <outlet property="Image" destination="2Oj-CM-IKR" id="7ha-tl-cO0"/>
                         <outlet property="heroNameOutlet" destination="Vbi-58-aHJ" id="3JR-c5-08s"/>
                         <outlet property="primaryAttrOutlet" destination="RUe-BX-3OB" id="CkQ-WO-1mY"/>
                     </connections>

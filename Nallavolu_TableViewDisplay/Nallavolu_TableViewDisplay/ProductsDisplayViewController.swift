@@ -1,35 +1,24 @@
 //
-//  HerostatsViewController.swift
-//  APIDemo
+//  ProductsDisplayViewController.swift
+//  Nallavolu_TableViewDisplay
 //
 //  Created by student on 11/18/21.
 //
 
 import UIKit
 
-class HeroStatsViewController: UIViewController {
+class ProductsDisplayViewController: UIViewController {
 
-    @IBOutlet weak var heroNameOutlet: UILabel!
-    
-    @IBOutlet weak var primaryAttrOutlet: UILabel!
-    
-    @IBOutlet weak var Image: UIImageView!
-    var hero : HeroStats?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        heroNameOutlet.text = hero?.localized_name
-        
-        primaryAttrOutlet.text = hero?.primary_attr
-        
-        
     }
     
 
     /*
     // MARK: - Navigation
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

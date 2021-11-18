@@ -14,6 +14,8 @@
 		3FD4EBA22746E82F00960443 /* Nallavolu_TableViewDisplay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4EBA02746E82F00960443 /* Nallavolu_TableViewDisplay.xcdatamodeld */; };
 		3FD4EBA42746E83600960443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4EBA32746E83600960443 /* Assets.xcassets */; };
 		3FD4EBA72746E83600960443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4EBA52746E83600960443 /* LaunchScreen.storyboard */; };
+		3FD4EBD62746F1C400960443 /* ProductsDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4EBD52746F1C400960443 /* ProductsDisplayViewController.swift */; };
+		3FD4EBD82746F2B100960443 /* DisplayImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4EBD72746F2B100960443 /* DisplayImagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		3FD4EBA32746E83600960443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FD4EBA62746E83600960443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FD4EBA82746E83600960443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD4EBD52746F1C400960443 /* ProductsDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDisplayViewController.swift; sourceTree = "<group>"; };
+		3FD4EBD72746F2B100960443 /* DisplayImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayImagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				3FD4EBA52746E83600960443 /* LaunchScreen.storyboard */,
 				3FD4EBA82746E83600960443 /* Info.plist */,
 				3FD4EBA02746E82F00960443 /* Nallavolu_TableViewDisplay.xcdatamodeld */,
+				3FD4EBD52746F1C400960443 /* ProductsDisplayViewController.swift */,
+				3FD4EBD72746F2B100960443 /* DisplayImagesViewController.swift */,
 			);
 			path = Nallavolu_TableViewDisplay;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			files = (
 				3FD4EB9C2746E82F00960443 /* ViewController.swift in Sources */,
 				3FD4EBA22746E82F00960443 /* Nallavolu_TableViewDisplay.xcdatamodeld in Sources */,
+				3FD4EBD62746F1C400960443 /* ProductsDisplayViewController.swift in Sources */,
+				3FD4EBD82746F2B100960443 /* DisplayImagesViewController.swift in Sources */,
 				3FD4EB982746E82F00960443 /* AppDelegate.swift in Sources */,
 				3FD4EB9A2746E82F00960443 /* SceneDelegate.swift in Sources */,
 			);

@@ -50,6 +50,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         URLSession.shared.dataTask(with: url!){data,response,error in
             if error == nil{
                 do{
+                    
                     self.heroes = try JSONDecoder().decode([HeroStats].self, from: data!)
                     DispatchQueue.main.async{
                         completed()
